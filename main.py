@@ -28,6 +28,16 @@ def afficher_taches():
         for i in range(len(taches)):
             print(f"{i + 1}. {taches[i]}")
 
+def rechercher_tache():
+    mot_cle = input("Mot-clé à rechercher : ").strip().lower()
+    trouve = False
+    for i in range(len(taches)):
+        if mot_cle in taches[i].lower():
+            print(f"{i + 1}. {taches[i]}")
+            trouve = True
+    if not trouve:
+        print("Aucune tâche trouvée.")
+
 
 
 
